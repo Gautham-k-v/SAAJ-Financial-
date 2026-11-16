@@ -72,6 +72,8 @@ function DashboardRoute() {
   )
 }
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined
+
 export default function App() {
   const pendingItems = adminNavItems.filter(
     (item) =>
@@ -88,7 +90,7 @@ export default function App() {
   )
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <Routes>
         <Route path="/" element={<HomeRedirect />} />
         <Route path="/login" element={<LoginPage />} />
