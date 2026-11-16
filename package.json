@@ -1,0 +1,9 @@
+{
+  "name": "saaj",
+  "private": true,
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "test": "node --test client/src/utils/*.test.js client/src/services/*.test.js server/src/*.test.js"
+  }
+}
